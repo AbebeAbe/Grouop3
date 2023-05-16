@@ -1,0 +1,25 @@
+
+  body {
+   font-family: 'Times New Roman', Times, serif;
+   text-align: center;
+   background-color: lightgray;
+  }
+  h1 {
+   margin-top: 50px;
+  }
+  button {
+   padding: 10px 20px;
+   background-color: gray;
+   color: #fff;
+   border: none;
+   border-radius: 5px;
+   cursor: pointer;
+   margin: 20px;
+  }
+  button:hover {
+   background-color: red;
+  }
+  #result {
+   font-size: 24px;
+   margin-top: 50px;
+  }
