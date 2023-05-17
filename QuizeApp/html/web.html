@@ -1,42 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quize App</title>
-    <link rel="stylesheet" href="style.css">
+ <title>Quiz Application</title>
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+ <link rel="stylesheet" type="text/css" href="css/c1.css">
 </head>
 <body>
-    <div class="quiz-container" id="quiz">
-        <div classs="quiz.header">
-            <h2 id="question">Question Text</h2>
-            <ul>
-                <li>
-                    <input type="radio" name="answer" id="a" class="answer">
-                    <label for="a" id="a_text">Answer</label>
-                </li>
-                <li>
-                    <input type="radio" name="answer" id="b" class="answer">
-                    <label for="b" id="b_text">Answer</label>
-                </li>
-                <li>
-                    <input type="radio" name="answer" id="c" class="answer">
-                    <label for="c" id="c_text">Answer</label>
-                </li>
-                <li>
-                    <input type="radio" name="answer" id="d" class="answer">
-                    <label for="d" id="d_text">Answer</label>
-                </li>
-            </ul>
+ <section id="welcome">
+  <div class="container">
+   <h1 style="color: blue;">Develop Quiz Application!</h1>
+   <p style="color:darkslategrey">Test your knowledge on a topic of your choice by answering multiple-choice questions.</p>
+   <button class="start-button" onclick="startQuiz()">Start Quiz</button>
+  </div>
+ </section>
 
+ <section id="quiz">
+  <div class="container">
+   <h2 id="question"></h2>
+   <ul class="choices">
+    <li onclick="checkAnswer(0)"><span>A</span> <p id="choice0"></p></li>
+    <li onclick="checkAnswer(1)"><span>B</span> <p id="choice1"></p></li>
+    <li onclick="checkAnswer(2)"><span>C</span> <p id="choice2"></p></li>
+    <li onclick="checkAnswer(3)"><span>D</span> <p id="choice3"></p></li>
+   </ul>
+   <p>Question <span id="current-question"></span> of <span id="total-questions"></span></p>
+   <p>Score: <span id="score"></span></p>
+   <div id="timer">
+    <p>Time Remaining:</p>
+    <p id="time">30</p>
+   </div>
+  </div>
+ </section>
 
-        </div>
-        <button id="submit">Submit</button>
+ <section id="results">
+  <div class="container">
+   <h2>Results</h2>
+   <p>You answered <span id="total-correct"></span> out of <span id="num-questions"></span> questions correctly.</p>
+   <button class="restart-button" onclick="restartQuiz()">Restart Quiz</button>
+  </div>
+ </section>
 
-    </div>
-    <script src="script.js"></script>
-    
-    
+ <script src="jv/s.js"></script>
 </body>
 </html>
